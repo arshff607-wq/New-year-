@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg,#000,#1a1a1a);
+  color:white;
+  text-align:center;
+}
+
+.section{
+  display:none;
+  padding:40px;
+  animation: fade 0.8s ease;
+}
+
+.section img, .section video{
+  width:260px;
+  border-radius:15px;
+  margin-top:20px;
+}
+
+button{
+  padding:12px 28px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  margin-top:30px;
+  cursor:pointer;
+}
+
+@keyframes fade{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="section" style="display:block">
+  <h1>🎉 Happy New Year 🎉</h1>
+  <p>A small journey of memories ✨</p>
+</div>
+
+<div class="section">
+  <h2>📸 Beautiful Moments</h2>
+  <p>Every picture holds a story worth remembering.</p>
+  <img src="photo1.jpg">
+</div>
+
+<div class="section">
+  <h2>💫 Another Memory</h2>
+  <p>Smiles, laughs and unforgettable vibes.</p>
+  <img src="photo2.jpg">
+</div>
+
+<div class="section">
+  <h2>🎥 A Special Clip</h2>
+  <p>Some moments are better in motion.</p>
+  <video src="video1.mp4" controls></video>
+</div>
+
+<div class="section">
+  <h2>❤️ Final Message</h2>
+  <p>May this year bring happiness, success and peace to your life.</p>
+  <p><b>Happy New Year once again 🎆</b></p>
+</div>
+
+<button onclick="next()">Next 👉</button>
+
+<script>
+let i = 0;
+let sections = document.querySelectorAll(".section");
+
+function next(){
+  sections[i].style.display="none";
+  i++;
+  if(i < sections.length){
+    sections[i].style.display="block";
+  }
+}
+</script>
+
+</body>
+</html>
