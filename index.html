@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body style="background:black;color:white;text-align:center">
+
+<h1>🎉 Happy New Year 🎉</h1>
+
+<p id="text">Click karo ❤️</p>
+
+<button onclick="next()">Next 👉</button>
+
+<script>
+let i=0;
+let msgs=[
+"Moment 1 – Yaadein ❤️",
+"Moment 2 – Smiles 😊",
+"Last Page – Wish you the best 💖"
+];
+function next(){
+document.getElementById("text").innerHTML=msgs[i];
+i++;
+}
+</script>
+
+</body>
+</html>
